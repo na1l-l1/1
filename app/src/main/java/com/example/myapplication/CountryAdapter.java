@@ -47,9 +47,5 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
         return countryList.size();
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView textViewCountry, textViewPopulation;
-        ImageView imageViewFlag;
-
 
 }

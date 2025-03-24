@@ -6,6 +6,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
 
         RecyclerView recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        List<Country> countryList = new ArrayList<>();
+        countryList.add(new Country("Vietnam", "98,000,000", R.drawable.vn));
+        countryList.add(new Country("United States", "320,000,000", R.drawable.usa));
+        countryList.add(new Country("Russia", "142,000,000", R.drawable.russia));
 
 
     }

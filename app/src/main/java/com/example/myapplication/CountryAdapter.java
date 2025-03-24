@@ -3,11 +3,10 @@ package com.example.myapplication;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.List;
 
 public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHolder> {
@@ -46,5 +45,15 @@ public class CountryAdapter extends RecyclerView.Adapter<CountryAdapter.ViewHold
         return countryList.size();
     }
 
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView textViewCountry, textViewPopulation;
+        ImageView imageViewFlag;
 
+        public ViewHolder(View itemView) {
+            super(itemView);
+            textViewCountry = itemView.findViewById(R.id.textViewCountry);
+            textViewPopulation = itemView.findViewById(R.id.textViewPopulation);
+            imageViewFlag = itemView.findViewById(R.id.imageViewFlag);
+        }
+    }
 }
